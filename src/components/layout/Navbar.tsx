@@ -17,8 +17,10 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              <Shield className="h-8 w-8 text-teal-500" />
-              <span className="ml-2 text-xl font-bold text-safetyblue-500">SafetyNet</span>
+              <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-safetyblue-500 to-teal-500">
+                <Shield className="h-5 w-5 text-white" />
+              </div>
+              <span className="ml-2 text-xl font-bold text-safetyblue-500">ShieldFi</span>
             </a>
           </div>
           

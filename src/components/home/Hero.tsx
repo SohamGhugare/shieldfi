@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Shield, Zap, BarChart3 } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Hero = () => {
   return (
@@ -36,35 +37,44 @@ const Hero = () => {
       {/* Stats section */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 -mt-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="glass-card rounded-2xl p-6 hover-scale">
-            <div className="flex items-center mb-3">
-              <div className="p-2 rounded-lg bg-blue-50">
-                <Shield className="h-6 w-6 text-safetyblue-500" />
+          <Card className="border-0 shadow-lg hover-scale overflow-hidden">
+            <div className="h-1.5 bg-gradient-to-r from-safetyblue-400 to-safetyblue-500"></div>
+            <CardContent className="p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-3 rounded-full bg-safetyblue-50">
+                  <Shield className="h-6 w-6 text-safetyblue-500" />
+                </div>
+                <h3 className="ml-4 text-lg font-semibold text-gray-900">Reliable Coverage</h3>
               </div>
-              <h3 className="ml-3 text-lg font-semibold text-gray-900">Reliable Coverage</h3>
-            </div>
-            <p className="text-gray-600">Protection against real-world events with instant claims processing</p>
-          </div>
+              <p className="text-gray-600">Protection against real-world events with instant claims processing and guaranteed payouts.</p>
+            </CardContent>
+          </Card>
           
-          <div className="glass-card rounded-2xl p-6 hover-scale">
-            <div className="flex items-center mb-3">
-              <div className="p-2 rounded-lg bg-teal-50">
-                <Zap className="h-6 w-6 text-teal-500" />
+          <Card className="border-0 shadow-lg hover-scale overflow-hidden">
+            <div className="h-1.5 bg-gradient-to-r from-teal-400 to-teal-500"></div>
+            <CardContent className="p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-3 rounded-full bg-teal-50">
+                  <Zap className="h-6 w-6 text-teal-500" />
+                </div>
+                <h3 className="ml-4 text-lg font-semibold text-gray-900">Capital Efficiency</h3>
               </div>
-              <h3 className="ml-3 text-lg font-semibold text-gray-900">Capital Efficiency</h3>
-            </div>
-            <p className="text-gray-600">Optimize your funds by participating in diversified insurance pools</p>
-          </div>
+              <p className="text-gray-600">Optimize your funds by participating in diversified insurance pools with market-leading yields.</p>
+            </CardContent>
+          </Card>
           
-          <div className="glass-card rounded-2xl p-6 hover-scale">
-            <div className="flex items-center mb-3">
-              <div className="p-2 rounded-lg bg-purple-50">
-                <BarChart3 className="h-6 w-6 text-purple-500" />
+          <Card className="border-0 shadow-lg hover-scale overflow-hidden">
+            <div className="h-1.5 bg-gradient-to-r from-purple-400 to-purple-500"></div>
+            <CardContent className="p-6">
+              <div className="flex items-center mb-4">
+                <div className="p-3 rounded-full bg-purple-50">
+                  <BarChart3 className="h-6 w-6 text-purple-500" />
+                </div>
+                <h3 className="ml-4 text-lg font-semibold text-gray-900">Transparent Returns</h3>
               </div>
-              <h3 className="ml-3 text-lg font-semibold text-gray-900">Transparent Returns</h3>
-            </div>
-            <p className="text-gray-600">Track performance and earn yields from unused premium reserves</p>
-          </div>
+              <p className="text-gray-600">Track performance in real-time and earn competitive yields from unused premium reserves.</p>
+            </CardContent>
+          </Card>
         </div>
       </div>
       
