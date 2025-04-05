@@ -1,73 +1,80 @@
-# Welcome to your Lovable project
+# ShieldFi
 
-## Project info
+A decentralized insurance platform built on Base Network using Metal's token infrastructure.
 
-**URL**: https://lovable.dev/projects/ba72f2a9-274b-4005-9c61-b373a6768e32
+## Overview
 
-## How can I edit this code?
+ShieldFi is a tokenized insurance application that leverages Metal's powerful APIs to create and manage tokens, user wallets, and transactions seamlessly. The platform operates exclusively on the Base Network, providing a secure and efficient environment for insurance services.
 
-There are several ways of editing your application.
+## Metal Integration
 
-**Use Lovable**
+The application utilizes Metal's core APIs to handle token operations:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ba72f2a9-274b-4005-9c61-b373a6768e32) and start prompting.
+- **Create Token**: Deploying the SHIELD token on Base Network
+- **Get Or Create Holder**: Managing user wallets and authentication
+- **Distribute Token**: Handling token distributions and rewards
+- **Get Token Holders**: Tracking token ownership and balances
 
-Changes made via Lovable will be committed automatically to this repo.
+## Key Features
 
-**Use your preferred IDE**
+- **Metal Wallet Integration**: Seamless wallet creation and management through Metal's infrastructure
+- **Tokenized Insurance**: SHIELD tokens represent insurance coverage and capital pool participation
+- **Base Network**: All core operations are executed on Base Network for optimal performance
+- **User-Friendly Interface**: Intuitive UI for managing insurance policies and token holdings
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Technical Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend**: React, TypeScript, Vite
+- **UI Components**: shadcn-ui, Tailwind CSS
+- **Token Infrastructure**: Metal API
+- **Network**: Base Network
 
-Follow these steps:
+## Getting Started
 
+1. Clone the repository:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone <repository-url>
+cd safety-net-protocol
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```sh
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. Set up environment variables:
+Create a `.env` file with:
+```
+VITE_METAL_API_KEY=your_metal_api_key
+VITE_SHIELD_TOKEN_ADDRESS=your_shield_token_address
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+4. Start the development server:
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `src/components/`: React components
+- `src/hooks/`: Custom React hooks
+- `src/lib/`: Utility functions and configurations
+- `src/pages/`: Main application pages
 
-**Use GitHub Codespaces**
+## Metal API Integration
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The application uses Metal's APIs for:
 
-## What technologies are used for this project?
+1. **User Authentication**:
+   - Creating and managing user wallets
+   - Handling wallet connections and disconnections
 
-This project is built with:
+2. **Token Operations**:
+   - Creating and managing SHIELD tokens
+   - Distributing tokens to users
+   - Tracking token balances and holders
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. **Transaction Management**:
+   - Processing token transfers
+   - Managing insurance claims and payouts
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/ba72f2a9-274b-4005-9c61-b373a6768e32) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
