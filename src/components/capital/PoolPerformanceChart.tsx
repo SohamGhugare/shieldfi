@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, TooltipProps } from 'recharts';
 
 // Mock data for the chart
 const data = [
@@ -15,7 +15,14 @@ const data = [
   { month: 'Sep', yield: 8.7 },
 ];
 
-const CustomTooltip = ({ active, payload, label }) => {
+// Define proper types for the CustomTooltip component
+type CustomTooltipProps = {
+  active?: boolean;
+  payload?: any[];
+  label?: string;
+} & TooltipProps<any, any>;
+
+const CustomTooltip: React.FC<CustomTooltipProps> = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
       <div className="bg-white p-3 border border-gray-200 shadow-md rounded-md">
