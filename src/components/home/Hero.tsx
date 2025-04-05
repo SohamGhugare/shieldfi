@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Shield, Zap, BarChart3 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,11 +25,11 @@ const Hero = () => {
           </p>
           
           <div className="mt-8 flex justify-center space-x-4">
-            <Button className="bg-safetyblue-500 hover:bg-safetyblue-600 text-white px-6 py-5 rounded-xl text-lg">
-              Get Coverage
+            <Button className="bg-safetyblue-500 hover:bg-safetyblue-600 text-white px-6 py-5 rounded-xl text-lg" asChild>
+              <Link to="/explore">Get Coverage</Link>
             </Button>
-            <Button variant="outline" className="bg-white border-safetyblue-500 text-safetyblue-500 hover:bg-safetyblue-50 px-6 py-5 rounded-xl text-lg">
-              Provide Capital
+            <Button variant="outline" className="bg-white border-safetyblue-500 text-safetyblue-500 hover:bg-safetyblue-50 px-6 py-5 rounded-xl text-lg" asChild>
+              <Link to="/pools">Provide Capital</Link>
             </Button>
           </div>
           
