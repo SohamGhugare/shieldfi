@@ -60,6 +60,7 @@ npm run dev
 - `src/hooks/`: Custom React hooks
 - `src/lib/`: Utility functions and configurations
 - `src/pages/`: Main application pages
+- `src/services`: Metal API Integration
 
 ## Metal API Integration
 
