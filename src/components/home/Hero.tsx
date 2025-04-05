@@ -78,6 +78,9 @@ const Hero = () => {
         </div>
       </div>
       
+      {/* Added padding/margin at the bottom of the Hero section */}
+      <div className="pb-24 md:pb-32"></div>
+      
       {/* Background elements */}
       <div className="absolute top-1/2 -left-96 w-[500px] h-[500px] rounded-full bg-teal-200 mix-blend-multiply opacity-20 filter blur-3xl animate-pulse-slow"></div>
       <div className="absolute top-1/3 -right-96 w-[600px] h-[600px] rounded-full bg-safetyblue-200 mix-blend-multiply opacity-20 filter blur-3xl animate-pulse-slow"></div>
@@ -86,3 +89,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
