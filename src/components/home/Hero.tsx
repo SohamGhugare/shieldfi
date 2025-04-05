@@ -31,6 +31,9 @@ const Hero = () => {
               Provide Capital
             </Button>
           </div>
+          
+          {/* Added margin below the CTA buttons */}
+          <div className="mb-12 md:mb-16"></div>
         </div>
       </div>
       
@@ -89,4 +92,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
