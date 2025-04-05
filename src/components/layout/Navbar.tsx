@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Shield, Copy, Check, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,6 +27,20 @@ const Navbar = () => {
   const { toast } = useToast();
   const location = useLocation();
 
+  // Load wallet data from localStorage on component mount
+  useEffect(() => {
+    const savedWalletData = localStorage.getItem('walletData');
+    if (savedWalletData) {
+      try {
+        const parsedData = JSON.parse(savedWalletData);
+        setWalletData(parsedData);
+      } catch (error) {
+        console.error("Error parsing saved wallet data:", error);
+        localStorage.removeItem('walletData');
+      }
+    }
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -46,6 +60,8 @@ const Navbar = () => {
       
       if (data && data.address) {
         setWalletData(data);
+        // Save wallet data to localStorage
+        localStorage.setItem('walletData', JSON.stringify(data));
         setIsLoginOpen(false);
         toast({
           title: "Wallet Connected",
@@ -75,6 +91,8 @@ const Navbar = () => {
   const handleDisconnect = () => {
     setWalletData(null);
     setIsWalletOpen(false);
+    // Remove wallet data from localStorage
+    localStorage.removeItem('walletData');
     toast({
       title: "Wallet Disconnected",
       description: "You have been disconnected from your wallet.",
